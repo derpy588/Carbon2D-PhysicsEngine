@@ -1,5 +1,7 @@
 #include <SFML/Graphics.hpp>
 
+#include "World.h"
+
 int main()
 {
     auto window = sf::RenderWindow{ { 1920u, 1080u }, "Carbon2D" };

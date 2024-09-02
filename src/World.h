@@ -8,6 +8,7 @@ class World
 private:
     Vec2 m_gravity {0, -9.81};
     std::vector<Object*> m_objects;
+    unsigned long long m_stepIndex;
 
 public:
     void AddObject(Object* object);
