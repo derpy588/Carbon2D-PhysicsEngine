@@ -10,7 +10,9 @@ FetchContent_Declare(SFML
     GIT_TAG 2.6.x)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(Carbon2D src/main.cpp)
+file(GLOB_RECURSE sources      src/*.cpp src/*.h)
+
+add_executable(Carbon2D ${sources})
 target_link_libraries(Carbon2D PRIVATE sfml-graphics)
 target_compile_features(Carbon2D PRIVATE cxx_std_17)
 
