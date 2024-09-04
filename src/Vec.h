@@ -42,13 +42,13 @@ Vec2 operator/(Vec2 a, T b) { return {(a.x / b), (a.y / b)}; }
 
 // Vector-Scalar assignment operators
 template <typename T>
-Vec2 operator+=(Vec2& a, T b) { return a = a + b };
+Vec2 operator+=(Vec2& a, T b) { return a = a + b; }
 template <typename T>
-Vec2 operator-=(Vec2& a, T b) { return a = a - b };
+Vec2 operator-=(Vec2& a, T b) { return a = a - b; }
 template <typename T>
-Vec2 operator*=(Vec2& a, T b) { return a = a * b };
+Vec2 operator*=(Vec2& a, T b) { return a = a * b; }
 template <typename T>
-Vec2 operator/=(Vec2& a, T b) { return a = a / b };
+Vec2 operator/=(Vec2& a, T b) { return a = a / b; }
 
 struct Vec3
 {
@@ -93,10 +93,10 @@ Vec3 operator/(Vec3 a, T b) { return {(a.x / b), (a.y / b), (a.z / b)}; }
 
 // Vector-Scalar assignment operators
 template <typename T>
-Vec3 operator+=(Vec3& a, T b) { return a = a + b };
+Vec3 operator+=(Vec3& a, T b) { return a = a + b; }
 template <typename T>
-Vec3 operator-=(Vec3& a, T b) { return a = a - b };
+Vec3 operator-=(Vec3& a, T b) { return a = a - b; }
 template <typename T>
-Vec3 operator*=(Vec3& a, T b) { return a = a * b };
+Vec3 operator*=(Vec3& a, T b) { return a = a * b; }
 template <typename T>
-Vec3 operator/=(Vec3& a, T b) { return a = a / b };
+Vec3 operator/=(Vec3& a, T b) { return a = a / b; }
