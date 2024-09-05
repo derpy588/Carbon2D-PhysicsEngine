@@ -31,7 +31,10 @@ void Carbon::start()
 
         m_world->Step(dt.asSeconds());
 
-        window.clear();
+        
+        window.clear(sf::Color(105, 105, 105, 0));
+        
+
         window.display();
     }
 }
