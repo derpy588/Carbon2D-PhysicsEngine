@@ -10,6 +10,16 @@ void World::RemoveObject(Object* object) {
     m_objects.erase(std::remove(m_objects.begin(), m_objects.end(), object), m_objects.end());
 }
 
+
+unsigned int World::getObjectsSize() {
+    return m_objects.size();
+}
+
+
+Object* World::getObjectPtrAtIndex(unsigned int index) {
+    return m_objects[index];
+}
+
 void World::Step(float dt) {
     for (Object* obj : m_objects) {
         obj->Force += obj->Mass * m_gravity; // Force = Mass * Acceleration

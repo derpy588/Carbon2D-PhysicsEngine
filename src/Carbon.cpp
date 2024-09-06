@@ -33,6 +33,17 @@ void Carbon::start()
 
         
         window.clear(sf::Color(105, 105, 105, 0));
+        sf::CircleShape objShape(10.0f);
+        Object* obj {nullptr};
+        for (int i{0}; i < m_world->getObjectsSize(); i++) {
+            obj = m_world->getObjectPtrAtIndex(i);
+            
+            
+            objShape.setFillColor(sf::Color::Blue);
+            objShape.setPosition(sf::Vector2f(obj->Position.x, obj->Position.y));
+
+            window.draw(objShape);
+        }
         
 
         window.display();
