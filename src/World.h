@@ -6,7 +6,7 @@
 class World
 {
 private:
-    Vec2 m_gravity {0.0f, 9.81f};
+    Vec2 m_gravity {0.0f, -9.81f};
     std::vector<Object*> m_objects;
     unsigned long long m_stepIndex;
 

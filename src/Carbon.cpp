@@ -40,7 +40,7 @@ void Carbon::start()
             
             
             objShape.setFillColor(sf::Color::Blue);
-            objShape.setPosition(sf::Vector2f(obj->Position.x, obj->Position.y));
+            objShape.setPosition(sf::Vector2f(obj->Position.x, -obj->Position.y));
 
             window.draw(objShape);
         }
