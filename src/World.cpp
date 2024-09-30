@@ -21,6 +21,8 @@ Object* World::getObjectPtrAtIndex(unsigned int index) {
 }
 
 void World::Step(float dt) {
+    ResolveCollisions(dt);
+
     for (Object* obj : m_objects) {
         obj->Force += obj->Mass * m_gravity; // Force = Mass * Acceleration
 
@@ -31,4 +33,28 @@ void World::Step(float dt) {
     }
 
     m_stepIndex++;
+}
+
+
+/*
+* I was trying to figure out how to collsion from this article
+* https://winter.dev/articles/physics-engine
+* However, I don't believe that this is the best way to go about this.
+* You see this can cause unecessary computations and would generally
+* be better if I used something like AABB detection.
+* So I am considering changing this and straying away from the initial
+* article stated above.
+*/
+void World::ResolveCollisions(float dt){
+    // array of collsions here
+
+    for (Object* a : m_objects) {
+        for (Object* b : m_objects) {
+            if (a == b)
+                break;
+
+            // Other stuff here
+        }
+        // Solve Collisions
+    }
 }

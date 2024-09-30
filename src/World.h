@@ -19,4 +19,6 @@ public:
 
     void Step(float dt);
 
+    void ResolveCollisions(float dt);
+
 };
